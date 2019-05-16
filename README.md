@@ -10,6 +10,7 @@ The code is structured as follows:
 Most codes contains loading, 10x10 nested Cross Validation and saving
 
 !!! MAIN CODE!!! :
+
 [1] Baseline_RR.py: 
 Baseline Ridge Regression with all channels and time signals. 
 
@@ -47,6 +48,7 @@ Code from Nicolai Pedersen. Caption generating network.
 
 
 !!! SNIPPETS !!!
+
 [A] DTU_HPC_example:
 Standard form of how code was submitted to the DTU HPC Cluster
 
