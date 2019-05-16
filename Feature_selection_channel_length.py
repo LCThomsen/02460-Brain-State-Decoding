@@ -74,7 +74,7 @@ y = featurevec_all
 print('Loaded data succesfully')
 
 #Lowering temporal resolution
-resolution = 12
+resolution = 4
 X = eeg_all
 X_f = np.copy(X[:, list(range(0, X.shape[1], resolution))])
 length_channel = n_samples/resolution
@@ -87,7 +87,7 @@ y = featurevec_all
 ####################
 
 # Length of segment that is cut for every iteration
-cut_real = 12*6
+cut_real = 6*4
 cut = int(cut_real / resolution)
 
 optimal_alpha_list = []
@@ -100,8 +100,8 @@ channel_bits = X_f.shape[1]/n_ch/cut
 index_list = list(range(0, n_ch*length_channel))
 index_rm_list = []
 ####################
-K1 = 2
-K2 = 2
+K1 = 10
+K2 = 10
 CV1 = model_selection.KFold(K1, shuffle=True, random_state=42)
 CV2 = model_selection.KFold(K2, shuffle=True, random_state=42)
 #alpha_ridge = [1, 1e4, 1e5, 1e6, 1e7]
